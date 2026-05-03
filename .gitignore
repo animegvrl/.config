@@ -1,0 +1,10 @@
+nixos-config/
+librewolf/
+lutris/*
+!lutris/lutris.conf
+!lutris/runners/
+QtProject.conf
+OpenTabletDriver/Logs/
+
+obs-studio/
+vesktop/

@@ -1,0 +1,4 @@
+system:
+  game_path: $HOME/Games
+wine:
+  version: GE-Proton10-34

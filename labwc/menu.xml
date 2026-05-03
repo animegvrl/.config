@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openbox_menu>
+  <menu id="root-menu" label="Root Menu">
+    <item label="Reconfigure">
+      <action name="Reconfigure" />
+    </item>
+    <item label="Foot">
+      <action name="Execute" command="foot" />
+    </item>
+  </menu>
+</openbox_menu>
