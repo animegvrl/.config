@@ -13,6 +13,12 @@ shopt -s extglob
 shopt -s globstar
 shopt -s checkjobs
 
+alias zed="zeditor"
+alias lg="lazygit"
+
+alias shyp="start-hyprland"
+alias ssha="ssh-add -t 15m ~/.ssh/id_ed25519_animegirl"
+
 alias todo="nvim ~/md/mainichi.md"
 alias ltodo="nvim ~/md/linux.md"
 alias md="yazi ~/md/"
@@ -43,4 +49,3 @@ sudo umount /mnt/m2/ ; \
 sudo umount /mnt/sus/ ; \
 sudo umount /mnt/nixos-old/
 "
-alias zed=zeditor
