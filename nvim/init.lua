@@ -10,6 +10,7 @@ vim.opt.wrap = false
 vim.opt.list = true
 vim.opt.listchars = {
     trail = '·',
+    tab = '→→',
     -- eol = '↲',
 }
 vim.opt.fixendofline = true
