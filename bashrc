@@ -29,11 +29,7 @@ sudo mount -t ntfs -o ro /dev/disk/by-label/M2 /mnt/m2/ ; \
 sudo mount -t ntfs -o ro /dev/disk/by-label/SUS /mnt/sus/ ; \
 sudo mount -t ext4 -o ro /dev/disk/by-label/nixosROOT /mnt/nixos-old/
 "
-alias nxec="here=$(pwd) ; \
-cd ~/.config/nixos-config/ ; \
-nvim ~/.config/nixos-config/ ; \
-cd $here
-"
+alias nxec="yazi ~/.config/nixos-config/"
 alias nxrb="~/.config/nixos-config/update-configuration.sh && \
 sudo nixos-rebuild boot && \
 ~/.config/nixos-config/backup-configuration.sh
