@@ -16,7 +16,6 @@ shopt -s checkjobs
 alias zed="zeditor"
 alias lg="lazygit"
 
-alias shyp="start-hyprland"
 alias ssha="ssh-add -t 15m ~/.ssh/id_ed25519_animegirl"
 alias pog="git push origin masutaa && git push github masutaa"
 
