@@ -20,3 +20,5 @@ vim.api.nvim_set_hl(0, "Normal", { bg = "#000000" })
 
 vim.opt.colorcolumn = "100"
 vim.cmd [[highlight ColorColumn guibg=#ff0000 ctermbg=NONE]]
+
+vim.keymap.set('v', '<C-c>', '"+y', { noremap = true, silent = true })
