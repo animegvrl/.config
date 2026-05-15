@@ -151,10 +151,18 @@ hl.gesture({
 
 hl.config({
     misc = {
+        disable_splash_rendering = true,
         force_default_wallpaper = 1,
         disable_hyprland_logo = true,
         disable_autoreload = true,
         background_color = 0x000000,
         vrr = 0,
+    },
+})
+
+hl.config({
+    ecosystem = {
+        no_donation_nag = true,
+        no_update_news  = true,
     },
 })
