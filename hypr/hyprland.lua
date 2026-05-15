@@ -69,16 +69,16 @@ hl.config({
         },
 
         resize_on_border = false,
-        allow_tearing = true,
+        allow_tearing    = true,
 
         layout = "scrolling",
     },
     decoration = {
-        rounding           = 0,
-        rounding_power     = 0,
+        rounding = 0,
+        rounding_power = 0,
 
-        active_opacity     = 1.0,
-        inactive_opacity   = 1.0,
+        active_opacity = 1.0,
+        inactive_opacity = 1.0,
 
         shadow = { enabled = false, },
         blur   = { enabled = false, },
@@ -103,10 +103,10 @@ hl.config({
 hl.config({
     scrolling = {
         fullscreen_on_one_column = true,
-        wrap_focus = false,
-        wrap_swapcol = false,
         explicit_column_widths = "0.5, 1.0",
         focus_fit_method = 1,
+        wrap_swapcol = false,
+        wrap_focus = false,
     },
 })
 
@@ -140,9 +140,9 @@ hl.config({
 })
 
 hl.gesture({
-    fingers = 3,
     direction = "horizontal",
-    action = "workspace",
+    fingers   = 3,
+    action    = "workspace",
 })
 
 ----------------
@@ -152,9 +152,9 @@ hl.gesture({
 hl.config({
     misc = {
         force_default_wallpaper = 1,
-        disable_hyprland_logo   = true,
-        disable_autoreload      = true,
-        background_color        = 0x000000,
-        vrr                     = 0,
+        disable_hyprland_logo = true,
+        disable_autoreload = true,
+        background_color = 0x000000,
+        vrr = 0,
     },
 })
