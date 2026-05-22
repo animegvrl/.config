@@ -43,3 +43,13 @@ hl.window_rule({
     move  = "20 monitor_h-120",
     float = true,
 })
+
+hl.window_rule({
+    name  = "floating-battle-net",
+    match = {
+        title    = "Battle.net",
+        class    = "steam_app_default",
+        xwayland = true,
+    },
+    float = true,
+})
