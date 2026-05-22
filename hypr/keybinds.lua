@@ -22,7 +22,13 @@ hl.bind("SUPER + L", hl.dsp.exec_cmd("hyprlock --no-fade-in"))
 ---------------------------
 
 hl.bind("SUPER + Q", hl.dsp.window.close())
-hl.bind("SUPER + F", hl.dsp.layout("colresize +conf"))
+hl.bind("SUPER + F", function ()
+    -- don't leave blank space on rightmost window shrink
+    hl.dispatch(hl.dsp.layout("colresize +conf"))
+    local current_window = hl.get_active_window()
+    hl.dispatch(hl.dsp.layout("focus l"))
+    hl.dispatch(hl.dsp.focus({ window = current_window }))
+end)
 hl.bind("SUPER + V", hl.dsp.window.float({ action = "toggle" }))
 -- hl.bind("SUPER + P", hl.dsp.window.pseudo())
 -- hl.bind("SUPER + J", hl.dsp.layout("togglesplit"))    -- dwindle only
