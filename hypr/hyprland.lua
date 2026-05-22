@@ -150,6 +150,12 @@ hl.gesture({
 ----------------
 
 hl.config({
+    render = {
+        direct_scanout = 1,
+    },
+})
+
+hl.config({
     misc = {
         disable_splash_rendering = true,
         force_default_wallpaper = 1,
