@@ -12,20 +12,20 @@ local suppressMaximizeRule = hl.window_rule({
 })
 -- suppressMaximizeRule:set_enabled(false)
 
-hl.window_rule({
-    -- Fix some dragging issues with XWayland
-    name  = "fix-xwayland-drags",
-    match = {
-        class      = "^$",
-        title      = "^$",
-        xwayland   = true,
-        float      = true,
-        fullscreen = false,
-        pin        = false,
-    },
-
-    no_focus = true,
-})
+-- hl.window_rule({
+--     -- Fix some dragging issues with XWayland
+--     name  = "fix-xwayland-drags",
+--     match = {
+--         class      = "^$",
+--         title      = "^$",
+--         xwayland   = true,
+--         float      = true,
+--         fullscreen = false,
+--         pin        = false,
+--     },
+--
+--     no_focus = true,
+-- })
 
 -- Layer rules also return a handle.
 -- local overlayLayerRule = hl.layer_rule({
@@ -43,6 +43,3 @@ hl.window_rule({
     move  = "20 monitor_h-120",
     float = true,
 })
-
--- # osu! not fullscreen on workspace switch fix
--- windowrule = fullscreen_state 3 3, match:class ^osu\!$
