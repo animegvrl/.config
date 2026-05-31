@@ -23,6 +23,20 @@ alias todo="nvim ~/md/mainichi.md"
 alias ltodo="nvim ~/md/linux.md"
 alias md="yazi ~/md/"
 
+nix_develop_fix() {
+    looking_at="$(pwd)"
+
+    while :; do
+        if [ -f "$looking_at/flake.nix" ]; then
+            nix develop $looking_at
+        fi
+
+        [ "$looking_at" = "/" ] && break
+        looking_at=$(dirname -- "$looking_at")
+    done
+}
+alias nxd="nix_develop_fix"
+
 alias mntall="sudo mount -t ntfs -o ro /dev/disk/by-label/M2_WINDOWS /mnt/m2-windows/ ; \
 sudo mount -t ntfs -o ro /dev/disk/by-label/M2 /mnt/m2/ ; \
 sudo mount -t ntfs -o ro /dev/disk/by-label/SUS /mnt/sus/ ; \
