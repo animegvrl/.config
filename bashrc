@@ -45,13 +45,11 @@ alias nxrt="
 "
 alias nxrs="
     ~/.config/nixos-config/update-configuration.sh && \
-    sudo nixos-rebuild switch && \
-    ~/.config/nixos-config/backup-configuration.sh
+    sudo nixos-rebuild switch
 "
 alias nxrb="
     ~/.config/nixos-config/update-configuration.sh && \
-    sudo nixos-rebuild boot && \
-    ~/.config/nixos-config/backup-configuration.sh
+    sudo nixos-rebuild boot
 "
 
 nix_develop_fix() {
