@@ -24,7 +24,7 @@ hl.monitor({
 
 hl.on("hyprland.start", function ()
   hl.exec_cmd("pidof waybar; if [ $? -eq 1 ]; then waybar; fi")
-  hl.exec_cmd("sleep 10 && obs --startreplaybuffer", { workspace = "10 silent" })
+  -- hl.exec_cmd("sleep 10 && obs --startreplaybuffer", { workspace = "10 silent" })
 end)
 
 -------------------------------
@@ -50,7 +50,9 @@ hl.env("QT_QPA_PLATFORMTHEME", "Adwaita-Dark")
 hl.env("QT_STYLE_OVERRIDE", "Adwaita-Dark")
 
 hl.env("SDL_AUDIODRIVER", "pipewire")
+hl.env("SDL_AUDIO_DRIVER", "pipewire")
 hl.env("SDL_VIDEODRIVER", "wayland")
+hl.env("SDL_VIDEO_DRIVER", "wayland")
 
 -----------------------
 ---- LOOK AND FEEL ----
