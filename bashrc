@@ -56,8 +56,8 @@ nix_develop_fix() {
     looking_at="$(pwd)"
 
     while :; do
-        if [ -f "$looking_at/flake.nix" ]; then
-            nix develop $looking_at
+        if [ -f "$looking_at/flake/flake.nix" ]; then
+            nix develop $looking_at/flake/
         fi
 
         [ "$looking_at" = "/" ] && break
