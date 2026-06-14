@@ -39,6 +39,7 @@ alias unmntall="
 ### NIXOS ###
 alias nxec="yazi ~/.config/nixos-config/"
 
+alias nxfu="~/.config/nixos-config/update-flake.sh"
 alias nxrt="
     ~/.config/nixos-config/update-configuration.sh && \
     sudo nixos-rebuild test
