@@ -6,6 +6,7 @@ lutris/*
 QtProject.conf
 OpenTabletDriver/Logs/
 dconf/
+bruno/
 
 obs-studio/
 vesktop/
