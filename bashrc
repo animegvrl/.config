@@ -14,6 +14,7 @@ shopt -s globstar
 shopt -s checkjobs
 
 alias zed="zeditor"
+alias et="editerm"
 alias lg="lazygit"
 
 alias ssha="ssh-add -t 15m ~/.ssh/id_ed25519_animegirl"
@@ -54,11 +55,15 @@ alias nxrb="
 "
 
 nix_develop_fix() {
+    if [ -f "flake.nix" ]; then
+        nix develop && return
+    fi
+
     looking_at="$(pwd)"
 
     while :; do
-        if [ -f "$looking_at/flake/flake.nix" ]; then
-            nix develop $looking_at/flake/
+        if [ -f "$looking_at/_flake/flake.nix" ]; then
+            nix develop $looking_at/_flake/
         fi
 
         [ "$looking_at" = "/" ] && break
