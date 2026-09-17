@@ -28,13 +28,11 @@ alias mntall="
     sudo mount -t ntfs -o ro /dev/disk/by-label/M2_WINDOWS /mnt/m2-windows/ ; \
     sudo mount -t ntfs -o ro /dev/disk/by-label/M2 /mnt/m2/ ; \
     sudo mount -t ntfs -o ro /dev/disk/by-label/SUS /mnt/sus/ ; \
-    sudo mount -t ext4 -o ro /dev/disk/by-label/nixosROOT /mnt/nixos-old/
 "
 alias unmntall="
     sudo umount /mnt/m2-windows/ ; \
     sudo umount /mnt/m2/ ; \
     sudo umount /mnt/sus/ ; \
-    sudo umount /mnt/nixos-old/
 "
 
 ### NIXOS ###
