@@ -21,5 +21,25 @@ vim.api.nvim_set_hl(0, "Normal", { bg = "#000000" })
 vim.opt.colorcolumn = "100"
 vim.cmd [[highlight ColorColumn guibg=#ff0000 ctermbg=NONE]]
 
+vim.lsp.config('ts_ls', {
+  cmd = { 'typescript-language-server', '--stdio' },
+
+  filetypes = {
+    'javascript',
+    'javascriptreact',
+    'typescript',
+    'typescriptreact',
+  },
+
+  root_markers = {
+    'tsconfig.json',
+    'package.json',
+    'jsconfig.json',
+    '.git',
+  },
+})
+
+vim.lsp.enable('ts_ls')
+
 require("keybinds")
 require("config.lazy")

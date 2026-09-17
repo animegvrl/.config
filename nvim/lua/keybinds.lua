@@ -20,7 +20,7 @@ vim.keymap.set("v", "<C-c>", "\"+y", { noremap = true, silent = true })
 -- vim.keymap.set("n", "<C-t>w", "<Cmd>tabclose<CR>", { desc = "Close tab" })
 
 vim.keymap.set({ "n" }, "<A-q>", "<Cmd>quitall<CR>")
-vim.keymap.set({ "n" }, "<A-e>", "<Cmd>e .<CR>")
+-- vim.keymap.set({ "n" }, "<A-e>", "<Cmd>e .<CR>")
 
 vim.keymap.set({ "n", "i", "t" }, "<C-e>", "<Cmd>Telescope find_files<CR>")
 
@@ -29,3 +29,6 @@ vim.keymap.set({ "n", "i", "t" }, "<C-w>", "<Cmd>tabclose<CR>", { nowait = true 
 
 vim.keymap.set({ "n", "i", "t" }, "<C-Tab>", "<Cmd>tabnext<CR>", { desc = "Next tab" })
 vim.keymap.set({ "n", "i", "t" }, "<C-S-Tab>", "<Cmd>tabprevious<CR>", { desc = "Previous tab" })
+
+vim.keymap.set({ "n", "i" }, "<A-e>", vim.diagnostic.open_float)
+
