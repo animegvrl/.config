@@ -13,12 +13,13 @@ set $left h
 set $down j
 set $up k
 set $right l
-# Your preferred terminal emulator
-set $term foot
-# Your preferred application launcher
-set $menu wmenu-run
 
 focus_follows_mouse no
+
+default_border pixel 2
+default_floating_border pixel 2
+
+client.focused #00ff00 #00ff00 #ffffff #00ff00
 
 ### Output configuration
 #
@@ -54,7 +55,7 @@ input type:pointer {
 # Basics:
 #
     # Start a terminal
-    bindsym $mod+Grave exec $term
+    bindsym $mod+Grave exec foot
 
     # Kill focused window
     bindsym $mod+q kill
@@ -135,25 +136,25 @@ input type:pointer {
     # You can "split" the current object of your focus with
     # $mod+b or $mod+v, for horizontal and vertical splits
     # respectively.
-    bindsym $mod+b splith
-    bindsym $mod+v splitv
+    # bindsym $mod+b splith
+    # bindsym $mod+v splitv
 
     # Switch the current container between different layout styles
-    bindsym $mod+s layout stacking
-    bindsym $mod+w layout tabbed
-    bindsym $mod+e layout toggle split
+    # bindsym $mod+s layout stacking
+    # bindsym $mod+w layout tabbed
+    # bindsym $mod+e layout toggle split
 
     # Make the current focus fullscreen
     bindsym $mod+f fullscreen
 
     # Toggle the current focus between tiling and floating mode
-    bindsym $mod+Shift+space floating toggle
+    bindsym $mod+v floating toggle
 
     # Swap focus between the tiling area and the floating area
-    bindsym $mod+space focus mode_toggle
+    # bindsym $mod+space focus mode_toggle
 
     # Move focus to the parent container
-    bindsym $mod+a focus parent
+    # bindsym $mod+a focus parent
 #
 # Scratchpad:
 #
@@ -161,11 +162,11 @@ input type:pointer {
     # You can send windows there and get them back later.
 
     # Move the currently focused window to the scratchpad
-    bindsym $mod+Shift+minus move scratchpad
+    # bindsym $mod+Shift+minus move scratchpad
 
     # Show the next scratchpad window or hide the focused scratchpad window.
     # If there are multiple scratchpad windows, this command cycles through them.
-    bindsym $mod+minus scratchpad show
+    # bindsym $mod+minus scratchpad show
 #
 # Resizing containers:
 #
@@ -224,9 +225,14 @@ bar {
     # The default just shows the current date and time.
     status_command while date +'%Y-%m-%d %H:%M'; do sleep 1; done
 
+    font Unifont
+
+    height 16
+
     colors {
         statusline #ffffff
         background #000000
+        focused_workspace #00ff00 #00ff00 #000000
         inactive_workspace #32323200 #32323200 #5c5c5c
     }
 }
